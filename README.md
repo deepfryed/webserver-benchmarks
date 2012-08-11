@@ -1,6 +1,6 @@
 # Web Server wars!
 
-Testing puma.io vs thin (with pastry pre-fork runner, similar to thin v2)
+Testing puma.io (just-dash-w) vs thin (with pastry pre-fork runner, similar to thin v2)
 
 ## Setup
 
