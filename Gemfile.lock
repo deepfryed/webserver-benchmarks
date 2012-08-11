@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: http://github.com/puma/puma
-  revision: 7d3c142efa9e59b2387b7c50c4cbad48c63b1ebc
+  revision: ab8dbfeb96e50863fb78bfa110ee24db8f69bd1e
   branch: just-dash-w
   specs:
     puma (1.5.0)

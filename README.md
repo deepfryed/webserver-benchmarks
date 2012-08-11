@@ -4,7 +4,13 @@ Testing puma.io (just-dash-w) vs thin (with pastry pre-fork runner, similar to t
 
 ## Setup
 
-`bundle --path gems --binstubs`
+* bundle install with binstubs
+
+```
+$ bundle --path gems --binstubs
+```
+
+## Environment
 
 ```
 $ uname -a
@@ -30,7 +36,9 @@ cache size	: 4096 KB
 
 ## Running
 
-`./bechmark.sh`
+* Use the bash script `./bechmark.sh`
+* puma runs with 2 workers `puma -w 2 -q`
+* pastry runs with 2 workers
 
 ## Results
 
@@ -42,28 +50,28 @@ testing puma
 
 
 Concurrency Level:      10
-Time taken for tests:   0.239 seconds
+Time taken for tests:   0.229 seconds
 Complete requests:      2000
-Failed requests:        0
+Failed requests:        1986
+   (Connect: 0, Receive: 0, Length: 1986, Exceptions: 0)
 Write errors:           0
-Total transferred:      152000 bytes
-HTML transferred:       24000 bytes
-Requests per second:    8370.16 [#/sec] (mean)
-Time per request:       1.195 [ms] (mean)
-Time per request:       0.119 [ms] (mean, across all concurrent requests)
+Total transferred:      9462912 bytes
+HTML transferred:       9334912 bytes
+Requests per second:    8745.92 [#/sec] (mean)
+Time per request:       1.143 [ms] (mean)
 ##########################################################################################
 testing thin (with pastry)
 ##########################################################################################
 
 
 Concurrency Level:      10
-Time taken for tests:   0.804 seconds
+Time taken for tests:   0.895 seconds
 Complete requests:      10000
 Failed requests:        0
 Write errors:           0
 Total transferred:      1130000 bytes
 HTML transferred:       120000 bytes
-Requests per second:    12438.83 [#/sec] (mean)
-Time per request:       0.804 [ms] (mean)
-Time per request:       0.080 [ms] (mean, across all concurrent requests)
+Requests per second:    11177.33 [#/sec] (mean)
+Time per request:       0.895 [ms] (mean)
+Time per request:       0.089 [ms] (mean, across all concurrent requests)
 ```
