@@ -10,6 +10,9 @@ bundle --path gems --binstubs
 $ uname -a
 Linux deepfryed.local 3.0.0-1-amd64 #1 SMP Sun Jul 24 02:24:44 UTC 2011 x86_64 GNU/Linux
 
+$ ruby -v
+ruby 1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]
+
 $ cat /proc/cpuinfo | grep "processor\|model name\|cache size"
 processor	: 0
 model name	: Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz
