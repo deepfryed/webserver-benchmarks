@@ -1,0 +1,38 @@
+GIT
+  remote: http://github.com/deepfryed/eventmachine
+  revision: 934fc7c6a05fbfdaa260ef2920ae8af10000da37
+  specs:
+    eventmachine (1.0.0.rc.4)
+
+GIT
+  remote: http://github.com/deepfryed/pastry
+  revision: 6893ee119c7cae76750f2515f6ac67878cfd4e4a
+  specs:
+    pastry (0.2.0)
+      thin
+
+GIT
+  remote: http://github.com/puma/puma
+  revision: 7d3c142efa9e59b2387b7c50c4cbad48c63b1ebc
+  branch: just-dash-w
+  specs:
+    puma (1.5.0)
+      rack (~> 1.2)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.1.9)
+    rack (1.4.1)
+    thin (1.4.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  eventmachine!
+  pastry!
+  puma!
