@@ -40,14 +40,30 @@ $ ./bechmark.sh
 testing puma
 ##########################################################################################
 
-Requests per second:    7778.53 [#/sec] (mean)
-Time per request:       1.286 [ms] (mean)
-Time per request:       0.129 [ms] (mean, across all concurrent requests)
+
+Concurrency Level:      10
+Time taken for tests:   0.239 seconds
+Complete requests:      2000
+Failed requests:        0
+Write errors:           0
+Total transferred:      152000 bytes
+HTML transferred:       24000 bytes
+Requests per second:    8370.16 [#/sec] (mean)
+Time per request:       1.195 [ms] (mean)
+Time per request:       0.119 [ms] (mean, across all concurrent requests)
 ##########################################################################################
 testing thin (with pastry)
 ##########################################################################################
 
-Requests per second:    11170.53 [#/sec] (mean)
-Time per request:       0.895 [ms] (mean)
-Time per request:       0.090 [ms] (mean, across all concurrent requests)
+
+Concurrency Level:      10
+Time taken for tests:   0.804 seconds
+Complete requests:      10000
+Failed requests:        0
+Write errors:           0
+Total transferred:      1130000 bytes
+HTML transferred:       120000 bytes
+Requests per second:    12438.83 [#/sec] (mean)
+Time per request:       0.804 [ms] (mean)
+Time per request:       0.080 [ms] (mean, across all concurrent requests)
 ```

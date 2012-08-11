@@ -9,7 +9,7 @@ echo
 pid=$!
 
 sleep 1
-ab -q -n2000 -c10 http://127.0.0.1:9292/ | head -n24 | tail -n3
+ab -q -n2000 -c10 http://127.0.0.1:9292/ | head -n24 | tail -n11
 kill -QUIT $pid
 kill -TERM $pid
 
@@ -23,5 +23,5 @@ echo
 pid=$!
 sleep 1
 
-ab -q -n10000 -c10 http://127.0.0.1:9292/ | head -n24 | tail -n3
+ab -q -n10000 -c10 http://127.0.0.1:9292/ | head -n24 | tail -n11
 kill -QUIT $pid
