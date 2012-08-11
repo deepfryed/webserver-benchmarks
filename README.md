@@ -42,8 +42,46 @@ cache size	: 4096 KB
 
 ## Results
 
+## With Keep-Alive
+
 ```
-$ ./bechmark.sh 
+$ ./bechmark.sh
+##########################################################################################
+testing puma
+##########################################################################################
+
+
+Concurrency Level:      10
+Time taken for tests:   0.125 seconds
+Complete requests:      2000
+Failed requests:        0
+Write errors:           0
+Keep-Alive requests:    2000
+Total transferred:      162000 bytes
+HTML transferred:       24000 bytes
+Requests per second:    15985.04 [#/sec] (mean)
+Time per request:       0.626 [ms] (mean)
+##########################################################################################
+testing thin (with pastry)
+##########################################################################################
+
+
+Concurrency Level:      10
+Time taken for tests:   0.812 seconds
+Complete requests:      10000
+Failed requests:        0
+Write errors:           0
+Keep-Alive requests:    0
+Total transferred:      1130000 bytes
+HTML transferred:       120000 bytes
+Requests per second:    12308.92 [#/sec] (mean)
+Time per request:       0.812 [ms] (mean)
+```
+
+## Without Keep-Alive
+
+```
+$ ./bechmark.sh
 ##########################################################################################
 testing puma
 ##########################################################################################
