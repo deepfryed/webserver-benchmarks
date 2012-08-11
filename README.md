@@ -6,6 +6,25 @@ Testing puma.io vs thin (with pastry pre-fork runner, similar to thin v2)
 
 bundle --path gems --binstubs
 
+```
+$ uname -a
+Linux deepfryed.local 3.0.0-1-amd64 #1 SMP Sun Jul 24 02:24:44 UTC 2011 x86_64 GNU/Linux
+
+$ cat /proc/cpuinfo | grep "processor\|model name\|cache size"
+processor	: 0
+model name	: Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz
+cache size	: 4096 KB
+processor	: 1
+model name	: Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz
+cache size	: 4096 KB
+processor	: 2
+model name	: Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz
+cache size	: 4096 KB
+processor	: 3
+model name	: Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz
+cache size	: 4096 KB
+```
+
 ## Running
 
 ./bechmark.sh
