@@ -4,7 +4,7 @@ Testing puma.io (just-dash-w) vs thin (with pastry pre-fork runner, similar to t
 
 ## Setup
 
-bundle --path gems --binstubs
+`bundle --path gems --binstubs`
 
 ```
 $ uname -a
@@ -30,7 +30,7 @@ cache size	: 4096 KB
 
 ## Running
 
-./bechmark.sh
+`./bechmark.sh`
 
 ## Results
 
