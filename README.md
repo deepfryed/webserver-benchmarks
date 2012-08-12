@@ -39,46 +39,9 @@ cache size	: 4096 KB
 * Use the bash script `./bechmark.sh`
 * puma runs with 2 workers `puma -w 2 -q`
 * pastry runs with 2 workers
+* keep-alive is turned on by default
 
 ## Results
-
-## With Keep-Alive
-
-```
-$ ./bechmark.sh -k
-##########################################################################################
-testing puma
-##########################################################################################
-
-
-Concurrency Level:      10
-Time taken for tests:   0.127 seconds
-Complete requests:      2000
-Failed requests:        0
-Write errors:           0
-Keep-Alive requests:    2000
-Total transferred:      202000 bytes
-HTML transferred:       24000 bytes
-Requests per second:    15755.72 [#/sec] (mean)
-Time per request:       0.635 [ms] (mean)
-##########################################################################################
-testing thin (with pastry)
-##########################################################################################
-
-
-Concurrency Level:      10
-Time taken for tests:   0.613 seconds
-Complete requests:      10000
-Failed requests:        0
-Write errors:           0
-Keep-Alive requests:    10000
-Total transferred:      1380000 bytes
-HTML transferred:       120000 bytes
-Requests per second:    16301.35 [#/sec] (mean)
-Time per request:       0.613 [ms] (mean)
-```
-
-## Without Keep-Alive
 
 ```
 $ ./bechmark.sh
@@ -86,30 +49,49 @@ $ ./bechmark.sh
 testing puma
 ##########################################################################################
 
-
 Concurrency Level:      10
-Time taken for tests:   0.229 seconds
-Complete requests:      2000
-Failed requests:        1986
-   (Connect: 0, Receive: 0, Length: 1986, Exceptions: 0)
+Time taken for tests:   3.217 seconds
+Complete requests:      50000
+Failed requests:        0
 Write errors:           0
-Total transferred:      9462912 bytes
-HTML transferred:       9334912 bytes
-Requests per second:    8745.92 [#/sec] (mean)
-Time per request:       1.143 [ms] (mean)
+Keep-Alive requests:    50000
+Total transferred:      5050000 bytes
+HTML transferred:       600000 bytes
+Requests per second:    15543.26 [#/sec] (mean)
+Time per request:       0.643 [ms] (mean)
+
+##########################################################################################
+memory use (rss)
+##########################################################################################
+
+parent:
+18932
+workers:
+16660
+17388
+
 ##########################################################################################
 testing thin (with pastry)
 ##########################################################################################
 
-
 Concurrency Level:      10
-Time taken for tests:   0.895 seconds
-Complete requests:      10000
+Time taken for tests:   2.984 seconds
+Complete requests:      50000
 Failed requests:        0
 Write errors:           0
-Total transferred:      1130000 bytes
-HTML transferred:       120000 bytes
-Requests per second:    11177.33 [#/sec] (mean)
-Time per request:       0.895 [ms] (mean)
-Time per request:       0.089 [ms] (mean, across all concurrent requests)
+Keep-Alive requests:    50000
+Total transferred:      6900000 bytes
+HTML transferred:       600000 bytes
+Requests per second:    16755.13 [#/sec] (mean)
+Time per request:       0.597 [ms] (mean)
+
+##########################################################################################
+memory use (rss)
+##########################################################################################
+
+parent:
+21972
+workers:
+19352
+19352
 ```

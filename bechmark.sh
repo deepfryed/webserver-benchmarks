@@ -1,6 +1,6 @@
 #!/bin/bash
 
-iter=10000
+iter=50000
 
 function memcheck() {
   ppid=$1
